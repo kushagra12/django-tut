@@ -1,0 +1,12 @@
+{% load bootstrap3 %}
+
+{% if all_albums %}
+    <h2>Here's my Music</h2>
+    <ul>
+        {% for album in all_albums %}
+            <li><a href="/music/{{ album.id }}">{{ album.album_title }}</a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <h2>You dont have no music ma.</h2>
+{% endif %}
